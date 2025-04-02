@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Suma</h1>
+    <!-- <form action="informacion.php" method="get" >
+        <label for="num1">Numero 1: </label>
+        <input type="text" name="n1">
+        <br>
+        <label for="num2">Numero 2: </label>
+        <input type="text" name="n2">
+        <br>
+    <button>Sumar</button> 
+
+    </form> -->
+
+    <form id="sumaform">
+        <label for="num1">Numero 1: </label>
+        <input type="number" required maxlength="5" id="n1">
+        <br>
+        <label for="num2">Numero 2: </label>
+        <input type="number" required maxlength="5" id="n2">
+        <br>
+       
+    <button type="submit">Sumar</button> 
+    </form>
+
+    <div id="resultado"></div>
+
+</body>
+<script src="suma.js"></script>
+</html>
