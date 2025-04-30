@@ -1,0 +1,24 @@
+.calculadora {
+    width: 400px;
+    margin: 50px auto;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #7FFFD4;
+}
+
+input[type="button"] {
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #B0E0E6;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #AFDCEC;
+}
