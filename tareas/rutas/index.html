@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Login</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<nav>
+    <a href="/">Inicio</a> |
+    <a href="/id">/id</a> |
+    <a href="/ruta3">/ruta3</a> |
+    <a href="/ruta4">/ruta4</a>
+</nav>
+
+<div class="formulario-container">
+    <h2>Iniciar Sesión</h2>
+    <form action="/login" method="POST">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+
+</body>
+</html>
