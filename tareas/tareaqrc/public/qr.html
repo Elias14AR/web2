@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar QR</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+<body class="grey lighten-4">
+
+    <div class="container">
+        <h3 class="center-align">Generar QR con API</h3>
+
+        <!-- Imagen pequeña decorativa -->
+        <div class="center-align" style="margin-bottom: 20px;">
+            <img src="./images/kanye-west.webp" alt="Logo" style="width: 80px; height: auto;">
+        </div>
+
+        <div class="center-align" style="margin-bottom: 20px;">
+            <a href="/" class="waves-effect waves-light btn"><i class="material-icons left">Inicio</i></a>
+            <a href="/calculadora" class="waves-effect waves-light btn blue"><i class="material-icons right">Calculadora</i></a>
+        </div>
+
+        <div class="row">
+            <form class="col s12 m8 offset-m2 card-panel" onsubmit="generarQR(); return false;">
+                <div class="input-field">
+                    <input id="input1" type="text" maxlength="150" required>
+                    <label for="input1">Nombre</label>
+                </div>
+                <div class="input-field">
+                    <input id="input2" type="email" maxlength="100" required>
+                    <label for="input2">Correo</label>
+                </div>
+                <div class="input-field">
+                    <input id="input3" type="text" list="listaEscuelas" required>
+                    <label for="input3">Selección de institución</label>
+                    <datalist id="listaEscuelas">
+                        <option value="IPN">Politécnico</option>
+                        <option value="FES Aragón">FES Aragón</option>
+                        <option value="UAM">UAM</option>
+                        <option value="CU">C.U.</option>
+                    </datalist>
+                </div>
+                <div class="input-field">
+                    <input id="input4" type="text" maxlength="50" required>
+                    <label for="input4">Dependencia</label>
+                </div>
+
+                <div class="center-align">
+                    <button class="btn waves-effect waves-light green" type="submit">Generar QR</button>
+                    <button type="reset" class="btn waves-effect red lighten-1">Limpiar</button>
+                </div>
+
+                <div id="qr-code" class="center-align" style="margin-top: 20px;">
+                    <!-- Aquí se mostrará el QR -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="qr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

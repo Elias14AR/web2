@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Aplicaciones</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <style>
+        .card-image img {
+            max-height: 300px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-content {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body class="grey lighten-4">
+
+    <div class="container">
+        <h3 class="center-align">Bienvenido</h3>
+        <p class="center-align">Selecciona la aplicación que deseas utilizar</p>
+
+        <div class="row">
+            <!-- Tarjeta Calculadora -->
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../images/Ye.jpg" alt="Calculadora">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p>Realiza operaciones básicas con esta calculadora sencilla y funcional.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="calculadora.html" class="btn waves-effect waves-light blue">Ir a Calculadora</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Generador de QR -->
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../images/Yeq.jpg" alt="Generador QR">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p>Genera códigos QR dinámicos ingresando tus datos fácilmente desde el navegador.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="qr.html" class="btn waves-effect waves-light green">Ir a Generador QR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

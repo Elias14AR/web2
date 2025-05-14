@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Materialize solo para el navbar -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Margen para que no quede pegado al navbar */
+        .calculadora-wrapper {
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Forzar que la calculadora ignore estilos de Materialize */
+        .calculadora input[type="button"],
+        .calculadora input[type="text"] {
+            all: unset; /* Resetea TODOS los estilos heredados */
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            background-color: #B0E0E6;
+            border-radius: 8px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .calculadora input[type="text"] {
+            background-color: #C1F0F6;
+            width: 200px;
+            height: 30px;
+        }
+
+        .calculadora {
+            background-color: #7FFFD4;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="/" class="brand-logo"><i class="material-icons">calculate</i>Calculadora</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/"><i class="material-icons left">home</i>Inicio</a></li>
+                <li><a href="/qr"><i class="material-icons left">qr_code</i>Generador QR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Calculadora aislada -->
+    <div class="calculadora-wrapper">
+        <div class="calculadora">
+            <input type="text" id="pantalla" disabled>
+            <br>
+            <input type="button" value="1" onclick="agregarPantalla('1')">
+            <input type="button" value="2" onclick="agregarPantalla('2')">
+            <input type="button" value="3" onclick="agregarPantalla('3')">
+            <input type="button" value="+" onclick="agregarPantalla('+')">
+            <br>
+            <input type="button" value="4" onclick="agregarPantalla('4')">
+            <input type="button" value="5" onclick="agregarPantalla('5')">
+            <input type="button" value="6" onclick="agregarPantalla('6')">
+            <input type="button" value="-" onclick="agregarPantalla('-')">
+            <br>
+            <input type="button" value="7" onclick="agregarPantalla('7')">
+            <input type="button" value="8" onclick="agregarPantalla('8')">
+            <input type="button" value="9" onclick="agregarPantalla('9')">
+            <input type="button" value="*" onclick="agregarPantalla('*')">
+            <br>
+            <input type="button" value="C" onclick="limpiaPantalla()">
+            <input type="button" value="0" onclick="agregarPantalla('0')">
+            <input type="button" value="=" onclick="calcular()">
+            <input type="button" value="/" onclick="agregarPantalla('/')">
+        </div>
+    </div>
+
+    <script src="calculadora.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
