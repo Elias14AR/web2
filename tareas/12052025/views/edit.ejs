@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/styles/styles.css">
+  <title>Editar Usuario</title>
+</head>
+<body>
+  <h1>Editar Usuario</h1>
+  <form action="/update/<%= user.id %>" method="post">
+    <label for="name">Nombre:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      value="<%= user.name %>"
+      maxlength="45"
+      required
+    />
+    <br /><br />
+    <label for="email">Correo:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      value="<%= user.email %>"
+      maxlength="45"
+      required
+    />
+    <br /><br />
+    <button type="submit">Actualizar</button>
+  </form>
+  <br />
+  <a href="/">Volver a la lista</a>
+</body>
+</html>
